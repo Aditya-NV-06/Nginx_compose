@@ -1,10 +1,10 @@
 version: "3.0"
 
 services:
-  nginx:  # Corrected the spelling from 'ngnix' to 'nginx'
+  nginx: 
     build:
-      context: ./server  # Specify the context directory for the build
-      dockerfile: Dockerfile  # Specify the Dockerfile name if it's not the default 'Dockerfile'
+      context: ./server 
+      dockerfile: Dockerfile  
     ports: 
       - "8080:80"
 
