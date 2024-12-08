@@ -1,0 +1,30 @@
+version: "3.0"
+
+services:
+  nginx:  # Corrected the spelling from 'ngnix' to 'nginx'
+    build:
+      context: ./server  # Specify the context directory for the build
+      dockerfile: Dockerfile  # Specify the Dockerfile name if it's not the default 'Dockerfile'
+    ports: 
+      - "8080:80"
+
+  app1:
+    build: .
+    environment:
+      - APP_NAME=app1
+    ports:
+      - "3001:3000"
+
+  app2:
+    build: .
+    environment:
+      - APP_NAME=app2
+    ports:
+      - "3002:3000"
+
+  app3: 
+    build: .
+    environment:
+      - APP_NAME=app3
+    ports:
+      - "3003:3000"
